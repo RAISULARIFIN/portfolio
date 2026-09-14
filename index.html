@@ -7,7 +7,6 @@
 
   <style>
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
@@ -27,8 +26,7 @@
       border-bottom: 1px solid #1e3553;
     }
 
-    .nav-content,
-    .container {
+    .nav-content, .container {
       width: min(1100px, 90%);
       margin: auto;
     }
@@ -155,7 +153,6 @@
     }
 
     .hero { animation: none; }
-
     .dark-section { background: #0b1a2c; }
 
     .grid {
@@ -201,9 +198,7 @@
     }
 
     .experience h3 { margin-bottom: 4px; }
-
     .muted { color: #a9bad1; }
-
     #contact .button { margin-right: 10px; }
 
     footer {
@@ -214,14 +209,8 @@
     }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(25px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes floatPhoto {
@@ -259,16 +248,13 @@
       }
 
       .grid { grid-template-columns: 1fr; }
-
       nav .links { display: none; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
 
-      *,
-      *::before,
-      *::after {
+      *, *::before, *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
@@ -295,7 +281,7 @@
   <main>
     <section class="hero" id="home">
       <video class="hero-video" id="heroVideo" autoplay muted loop playsinline>
-        <source src="dubai.mp4" type="video/mp4" />
+        <source src="dubai.mp4%20(1).mp4" type="video/mp4" />
       </video>
 
       <div class="hero-overlay"></div>
@@ -376,13 +362,10 @@
           <article class="card">
             <h3>Retail ERP System</h3>
             <p>
-              End-to-end retail ERP covering GST-compliant billing, POS
-              transactions, inventory, accounting, ledgers, profit and loss,
-              and financial reporting.
+              End-to-end retail ERP covering GST-compliant billing, POS transactions,
+              inventory, accounting, ledgers, profit and loss, and financial reporting.
             </p>
-            <p class="muted">
-              Spring Boot · Microservices · REST APIs · MySQL
-            </p>
+            <p class="muted">Spring Boot · Microservices · REST APIs · MySQL</p>
           </article>
 
           <article class="card">
@@ -391,9 +374,7 @@
               Secure e-commerce platform with JWT authentication, product catalogue,
               order management, and payment gateway integration APIs.
             </p>
-            <p class="muted">
-              Spring Security · JWT · Spring Boot · MySQL
-            </p>
+            <p class="muted">Spring Security · JWT · Spring Boot · MySQL</p>
           </article>
 
           <article class="card">
@@ -402,9 +383,7 @@
               Microservices-based room-booking workflows with fingerprint scanner
               biometric authentication for secure check-in and check-out.
             </p>
-            <p class="muted">
-              Java · Spring Boot · Microservices · Biometrics
-            </p>
+            <p class="muted">Java · Spring Boot · Microservices · Biometrics</p>
           </article>
         </div>
       </div>
@@ -448,9 +427,7 @@
           and AI Engineering opportunities.
         </p>
 
-        <a class="button" href="mailto:raisuljn@gmail.com">
-          Email Me
-        </a>
+        <a class="button" href="mailto:raisuljn@gmail.com">Email Me</a>
 
         <a
           class="button"
@@ -472,8 +449,7 @@
     const heroVideo = document.getElementById("heroVideo");
 
     window.addEventListener("scroll", () => {
-      const scrollPosition = window.scrollY;
-      const movement = Math.min(scrollPosition * 0.12, 90);
+      const movement = Math.min(window.scrollY * 0.12, 90);
       heroVideo.style.transform = `translateY(${movement}px) scale(1.12)`;
     });
   </script>
