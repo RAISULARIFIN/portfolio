@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M. Raisul Arifin | Full Stack Developer</title>
+
   <style>
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -110,6 +111,13 @@
       color: white;
       text-decoration: none;
       font-weight: bold;
+      transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      background: #46a2ff;
+      box-shadow: 0 8px 20px rgba(37, 135, 232, 0.35);
     }
 
     section { padding: 75px 0; }
@@ -127,6 +135,13 @@
       padding: 25px;
       border: 1px solid #1e4269;
       border-radius: 10px;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #63b3ff;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
     }
 
     .card h3 {
@@ -155,11 +170,41 @@
 
     .muted { color: #a9bad1; }
 
+    #contact .button { margin-right: 10px; }
+
     footer {
       text-align: center;
       padding: 28px;
       color: #9cafc7;
       border-top: 1px solid #1e3553;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes floatPhoto {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .hero-content {
+      animation: fadeUp 0.9s ease-out both;
+    }
+
+    section:not(.hero) {
+      animation: fadeUp 0.8s ease-out both;
+    }
+
+    .photo {
+      animation: floatPhoto 4s ease-in-out infinite;
     }
 
     @media (max-width: 760px) {
@@ -185,11 +230,13 @@
   <nav>
     <div class="nav-content">
       <a class="logo" href="#home">M. Raisul Arifin</a>
+
       <div class="links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -200,10 +247,12 @@
         <div>
           <div class="tag">Full Stack Developer</div>
           <h1>M. Raisul Arifin</h1>
+
           <p class="subtitle">
             Java, Spring Boot, Microservices and React Developer building secure,
             scalable, and high-performance business applications.
           </p>
+
           <a class="button" href="#projects">View My Projects</a>
         </div>
 
@@ -214,6 +263,7 @@
     <section id="about">
       <div class="container">
         <h2>About Me</h2>
+
         <p>
           Full Stack Developer with 3+ years of experience designing and developing
           scalable backend systems and full-stack business applications. Skilled in
@@ -227,6 +277,7 @@
     <section class="dark-section" id="skills">
       <div class="container">
         <h2>Technical Skills</h2>
+
         <div class="skills">
           <span>Java 17</span>
           <span>Python</span>
@@ -330,25 +381,29 @@
         </div>
       </div>
     </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Connect With Me</h2>
+
+        <p>
+          I am open to Full Stack Developer, Software Engineer, and AI Engineering
+          opportunities.
+        </p>
+
+        <a class="button" href="https://www.linkedin.com/in/raisul-arifin-57b76623a/" target="_blank">
+          LinkedIn Profile
+        </a>
+
+        <a class="button" href="https://github.com/RAISULARIFIN" target="_blank">
+          GitHub Profile
+        </a>
+      </div>
+    </section>
   </main>
 
-  <section id="contact">
-  <div class="container">
-    <h2>Connect With Me</h2>
-    <p>I am open to Full Stack Developer, Software Engineer, and AI Engineering opportunities.</p>
-
-    <a class="button" href="https://www.linkedin.com/in/raisul-arifin-57b76623a/" target="_blank">
-      LinkedIn Profile
-    </a>
-
-    <a class="button" href="https://github.com/RAISULARIFIN" target="_blank">
-      GitHub Profile
-    </a>
-  </div>
-</section>
-
-<footer>
-  © 2026 M. Raisul Arifin · Full Stack Developer
-</footer>
+  <footer>
+    © 2026 M. Raisul Arifin · Full Stack Developer
+  </footer>
 </body>
 </html>
